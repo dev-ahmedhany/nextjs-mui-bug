@@ -4,8 +4,11 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     modularizeImports: {
-      "my-library/?(((\\w*)?/?)*)": {
-        transform: "my-library/{{ matches.[1] }}/{{member}}",
+      "@mui/material": {
+        transform: "@mui/material/{{member}}",
+      },
+      "@mui/icons-material": {
+        transform: "@mui/icons-material/{{member}}",
       },
     },
   },
